@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  background: url("../../../../../assets/images/black.jpg");
+  overflow: auto;
+  background-size: cover;
+
+
+
+}
+.welcome {
+  max-width: 675px;
+  font-size: 16px;
+  color: #eae9db;
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+
+}
+.login_logo{
+  margin-bottom: 50px;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  text-align: center;
+}
+
+.formInfo {
+  display: flex;
+  flex-direction: column;
+
+}
+
+h1 {
+  height: 23px;
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #173445;
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #173445;
+  width: 23vw;
+  height: 90vh;
+  border-radius: 15px;
+  box-shadow: 7px 7px #aaa;
+  text-align: left;
+}
+
+label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #eae9db;
+  transition: 0.2s all;
+  margin-top: 1.4rem;
+}
+
+input {
+  height: 48px;
+  width: 15.625vw;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #eae9db;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.error {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: red;
+
+}
+
+.alert {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15.625vw;
+  height: 48px;
+  background: #1dc763;
+  border-radius: 4px;
+  color: #ffffff;
+  border-style: hidden;
+  margin-top: 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+
+}
+.gotoLogin {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 25px;
+  color: #eae9db;
+}
+span{
+  cursor: pointer;
+  text-decoration:underline;
+}
+.loadingImg {
+  width: 20px;
+  margin-right: 10px;
+}

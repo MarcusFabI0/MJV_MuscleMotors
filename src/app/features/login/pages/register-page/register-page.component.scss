@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap");
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  background: url("../../../../../assets/images/darkblue.jpg");
+  //background: #173445;
+  overflow: auto;
+  background-size: cover;
+}
+.welcome {
+  max-width: 675px;
+  font-size: 28px;
+  color: #eae9db;
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  margin-top: 70px;
+}
+.register {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  height: 23px;
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #173445;
+}
+.formInfo {
+  display: flex;
+  flex-direction: column;
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #eae9db;
+  width: 20%;
+  height: 80%;
+  border-radius: 15px;
+  box-shadow: 7px 7px #aaa;
+  text-align: left;
+}
+
+.alert {
+  font-size: 10px;
+  color: red;
+  margin-top: 4px;
+  margin-left: 10px;
+}
+
+label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #173445;
+  transition: 0.2s all;
+  margin-top: 1.4rem;
+}
+
+input {
+  height: 48px;
+  width: 15.625vw;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #66afff;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15.625vw;
+  height: 48px;
+  background: #FEB343;
+  border-radius: 4px;
+  color: #ffffff;
+  border-style: hidden;
+  margin-top: 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+}
+.gotoLogin {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 25px;
+}
+span{
+  cursor: pointer;
+  text-decoration:underline;
+}
+button:disabled {
+  opacity: 0.5;
+}
+
+.loadingImg {
+  width: 20px;
+  margin-right: 10px;
+}
+
+

@@ -1,0 +1,128 @@
+<div class="container">
+  <div class="register">
+    <img class="register__logo" src="../../../../../assets/images/Muscle_MotorsBG.png" alt="logo" />
+    <p class="welcome">Bem-vindo(a) à Muscle Motors! Para comprar ou vender, crie sua conta. Aproveite nossa seleção de carros icônicos em excelentes condições e faça parte da nossa comunidade de entusiastas de carros clássicos.</p>
+  </div>
+
+  <form [formGroup]="formRegister" (ngSubmit)="signUp()" class="register-form">
+    <h1>Cadastre-se na Muscle Motors!</h1>
+    <div class="formInfo">
+      <label for="name">Nome:</label>
+      <input
+        formControlName="name"
+        placeholder="Digite seu nome"
+        type="name"
+        id="name"
+        name="name"
+        required
+      />
+      <div *ngIf="formRegister.controls.name.invalid && (formRegister.controls.name.dirty || formRegister.controls.name.touched)">
+        <div  class="alert" *ngIf="formRegister.controls.name.errors?.['required']">
+          Nome é obrigatório!
+        </div>
+      </div>
+    </div>
+
+
+   <div class="formInfo">
+    <label for="surname">Sobrenome:</label>
+    <input
+      formControlName="surname"
+      placeholder="Digite seu sobrenome"
+      type="name"
+      id="surname"
+      name="surname"
+      required
+    />
+    <div *ngIf="formRegister.controls.surname.invalid && (formRegister.controls.surname.dirty || formRegister.controls.surname.touched)">
+      <div class="alert" *ngIf="formRegister.controls.surname.errors?.['required']">
+        Sobrenome é obrigatório!
+      </div>
+    </div>
+   </div>
+
+   <div class="formInfo">
+    <label for="tel">Celular:</label>
+    <input
+      formControlName="phone"
+      placeholder="(XX)XXXXX-XXXX"
+      type="tel"
+      id="phone"
+      name="phone"
+      required
+    />
+    <div *ngIf="formRegister.controls.phone.invalid && (formRegister.controls.phone.dirty || formRegister.controls.phone.touched)">
+      <div class="alert" *ngIf="formRegister.controls.phone.errors?.['required']">
+        Celular é obrigatório!
+      </div>
+      <div class="alert" *ngIf="formRegister.controls.phone.errors?.['pattern']">
+        Formato inválido! Tente (XX)XXXXX-XXXX
+      </div>
+    </div>
+   </div>
+
+   <div class="formInfo">
+    <label for="email">E-mail:</label>
+    <input
+      formControlName="email"
+      placeholder="Digite seu email"
+      type="email"
+      id="email"
+      name="email"
+      required
+    />
+    <div *ngIf="formRegister.controls.email.invalid && (formRegister.controls.email.dirty || formRegister.controls.email.touched)">
+      <div class="alert" *ngIf="formRegister.controls.email.errors?.['required']">
+        Email é obrigatório!
+      </div>
+      <div class="alert" *ngIf="formRegister.controls.email.errors?.['email']">
+        Email inválido!
+      </div>
+    </div>
+   </div>
+
+   <div class="formInfo">
+    <label for="password">Senha:</label>
+    <input
+      formControlName="password"
+      placeholder="Digite sua senha"
+      type="password"
+      id="password"
+      name="password"
+      required
+    />
+
+    <div *ngIf="formRegister.controls.password.invalid && (formRegister.controls.password.dirty || formRegister.controls.password.touched)">
+      <div class="alert" *ngIf="formRegister.controls.password.errors?.['required']">
+        Senha é obrigatória!
+      </div>
+      <div class="alert" *ngIf="formRegister.controls.password.errors?.['pattern']">
+        Senha deve conter no mínimo:<br>- 8 caracteres<br>- 1 letra maiúscula<br>- 1 caracter especial.
+      </div>
+    </div>
+   </div>
+
+    <div class="formInfo">
+      <label for="birth">Data de nascimento:</label>
+    <input
+      formControlName="birth"
+      placeholder=""
+      type="date"
+      id="birth"
+      name="birth"
+      required
+    />
+    </div>
+    <button type="submit" [disabled]="formRegister.invalid">
+      <img
+        class="loadingImg"
+        *ngIf="buttonLoading"
+        src="../../../../../assets/images/spinner.svg"
+
+      />
+      {{ buttonLoading ? "Verificando..." : "Criar conta" }}
+    </button>
+    <p class="gotoLogin">Já tem uma conta?  <span [routerLink]="['/login']" > Faça o login</span></p>
+
+  </form>
+</div>

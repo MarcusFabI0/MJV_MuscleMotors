@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]="formLogin" (ngSubmit)="userLogin()" class="login_form">
+
+      <div class="login">
+        <img class="login_logo" src="../../../../../assets/images/MuscleMotorsBG.png" alt="logo" />
+        <p class="welcome"><strong>Bem-vindo(a) de volta!<br></strong>Faça o login para usufruir de tudo que podemos oferecer!</p>
+
+      </div>
+      <div class="formInfo">
+        <label for="email">E-mail:</label>
+        <input
+          formControlName="email"
+          placeholder="Digite seu email"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+        <div *ngIf="formLogin.controls.email.invalid && (formLogin.controls.email.dirty || formLogin.controls.email.touched)">
+
+          <div class="alert" *ngIf="formLogin.controls.email.errors?.['email']">
+            *Email inválido
+          </div>
+        </div>
+       </div>
+<div class="formInfo">
+ <label for="password">Senha:</label>
+    <input
+      formControlName="password"
+      placeholder = "Digite sua senha"
+      type="password"
+      id="password"
+      name="password"
+      required
+    />
+</div>
+
+    <p class="error" *ngIf="error">*Credenciais inválidas*</p>
+    <button  type="submit">
+      <img class="loadingImg"  *ngIf="buttonLoading"  src="../../../../../assets/images/spinner.svg">
+    {{ buttonLoading ? "Entrando..." : "Entrar" }}
+    </button>
+    <p class="gotoLogin">Não tem uma conta?  <span [routerLink]="['/register']" > Faça o cadastro!</span></p>
+</form>
+
+</div>
+
+
