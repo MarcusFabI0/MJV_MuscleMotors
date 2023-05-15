@@ -1,0 +1,35 @@
+.navigation-bar .vanguard-container .navigation-bottom-row {
+  width: 100%;
+  float: none;
+  position: absolute;
+  z-index: 2;
+  top: initial;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid #333333;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out
+}
+
+.navigation-bar .vanguard-container .navigation-link-bar {
+  float: initial;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out
+}
