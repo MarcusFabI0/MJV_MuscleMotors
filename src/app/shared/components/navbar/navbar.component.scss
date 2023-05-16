@@ -1,35 +1,78 @@
-.navigation-bar .vanguard-container .navigation-bottom-row {
-  width: 100%;
-  float: none;
-  position: absolute;
-  z-index: 2;
-  top: initial;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top: 2px solid #333333;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.navigation-bar .vanguard-container .navigation-link-bar {
-  float: initial;
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-  width: 100%;
+.navbar-container {
+  background-color: black;
+  height: 18vh;
+  position: fixed;
+  top: 0;
+  width: 100%
+
+}
+
+
+.navbar {
+  color: white;
+  display: flex;
+
+  justify-content: space-evenly;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+.navbar a {
+    font-family: "Bebas Neue", sans-serif;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    transition: all 1s ease-in-out;
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+
+.navbar-container a:hover {
+  color: red
+}
+
+.links{
   display: flex;
   align-items: center;
-  justify-content: center;
-  opacity: 1;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out
+  justify-content: space-evenly;
+  list-style-type: none;
+  gap: 30px;
+}
+
+.logo{
+  height: 15vh;
+  margin-top: 15px;
+}
+
+.welcome {
+  position: absolute;
+  top: 15px;
+  right: 1px;
+}
+
+.welcome-text,a,span{
+  margin-right: 10px;
+  font-family: "Bebas Neue", sans-serif; text-transform: uppercase;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.logout-icon {
+  font-size: 18px;
+  margin-left: 10px;
 }
