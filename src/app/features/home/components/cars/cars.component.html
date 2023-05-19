@@ -1,2 +1,58 @@
 <app-navbar></app-navbar>
+<div class="background-wrap">
+  <div class="background-img"></div>
+</div>
+<div class="gray-background">
+  <div class="car">
+    <a href="*" class="car-grid-item" *ngFor="let car of cars">
+      <div class="car-container">
+        <div
+          class="car-thumb"
+          [ngStyle]="{ 'background-image': 'url(' + car.images[0] + ')' }"
+        ></div>
+        <div class="car-info">
+          <div class="border-left">
+            <div class="year-brand-row">
+              <span class="year">{{ car.year }}</span>
+              <span class="brand">{{ car.brand }}</span>
+            </div>
+            <div class="car-name-row">
+              <span class="car-model">{{ car.model }}</span>
+            </div>
+            <div class="car-highlight">
+              <span class="mileage-title">KM: </span>
+              <span class="car-mileage">{{ car.mileage }}km</span>
+              <!-- <span class="car-header">{{car.shortDescription}}</span> -->
+              <span class="car-header"
+                >Transmissão: {{ car.transmission | titlecase }}</span
+              >
+              <span class="car-header"
+                >Motor: {{ car.engine | titlecase }}</span
+              >
+            </div>
+            <div class="car-price-row">
+              <div class="car-price-container">
+                <div class="car-price">
+                  {{ car.price | currency : "BRL" : "symbol" : "3.2-2" }}
+                </div>
+              </div>
+              <div class="car-month-row">
+                <div class="car-price-title">ou 24x de</div>
+                <div class="car-price-month">
+                  {{
+                    car.price
+                      | installment
+                      | currency : "BRL" : "symbol" : "3.2-2"
+                  }}
+                </div>
+                <div class="car-price-title-month">/ mês</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
 <app-footer></app-footer>
