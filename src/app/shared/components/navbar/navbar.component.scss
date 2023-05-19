@@ -7,18 +7,17 @@
 
 .navbar-container {
   background-color: black;
-  height: 18vh;
+  height: 17vh;
+  top: 0;
+  width: 100%;
   position: fixed;
   top: 0;
-  width: 100%
-
+  z-index: 100;
 }
-
 
 .navbar {
   color: white;
   display: flex;
-
   justify-content: space-evenly;
   margin-left: 15vw;
   margin-right: 15vw;
@@ -69,10 +68,48 @@
   font-size: 15px;
   font-weight: normal;
   letter-spacing: 2px;
+}
+a{
   cursor: pointer;
 }
 
 .logout-icon {
   font-size: 18px;
   margin-left: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navbar a {
+    padding: 10px 0;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    margin-top: 10px;
+  }
+
+  .welcome {
+    position: static;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .welcome-text,
+  a,
+  span {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
 }

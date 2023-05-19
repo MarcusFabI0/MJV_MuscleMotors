@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.footer{
+  position:relative;
+  margin-top: auto;
+  bottom: 0;
+  width: 100%;
+}
+
 .footer-links {
   background-color: black;
   display: flex;
@@ -13,20 +20,18 @@
   width: 100%;
   height: 150px;
   padding: 20px 20px;
-  position: relative;
+
 }
+
 
 .footer-container .footer-info {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 1150px;
   max-width: 1150px;
   margin: 0 auto;
-  position: absolute;
-  left: 0;
-  right: 0;
+  position: relative;
 }
 
 .footer-info a {
@@ -36,9 +41,7 @@
   transition: color 0.5s ease-in-out;
 }
 
-.footer-info a:hover {
-  color: red;
-}
+
 
 .footer-links span {
   margin-bottom: 0;
@@ -64,7 +67,8 @@ span {
 }
 
 .social-links {
-  float: right;
+  display: flex;
+  align-items: center;
 }
 
 .facebook-icon {
@@ -107,14 +111,20 @@ span {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 15px 15px;
-  background-color: transparent;
   opacity: 1;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   margin-right: 10px;
   margin-bottom: 10px;
 
 }
 
-.social-links a:hover {
+
+.footer-info a:hover {
   color: red;
 }
+
+.footer-links span a:hover {
+  color: red;
+}
+
+

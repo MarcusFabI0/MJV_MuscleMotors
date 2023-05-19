@@ -1,9 +1,9 @@
     <nav class="navbar-container">
     <div class="navbar">
       <ul class="links">
-        <li><a href="">Home</a></li>
-      <li><a href="">Garagem</a></li>
-      <li><a href="">Venda seu Muscle</a></li>
+        <li><a [routerLink]="['/cars']">Home</a></li>
+      <li><a [routerLink]="['/cars']">Garagem</a></li>
+      <li><a [routerLink]="['/cars/sell']">Venda seu Muscle</a></li>
        </ul>
      <div>
        <img  class="logo" src="../../../../assets/images/MuscleMotorsLogo.png" alt="logo" >
@@ -15,7 +15,7 @@
      </ul>
     </div>
      <div class="welcome">
-      <span class="welcome-text">Bem vindo, usuário | <a onclick="logout()">LOGOUT</a></span>
+      <span class="welcome-text">Bem vindo, {{user.name}} | <a (click)="logout()">LOGOUT</a></span>
     </div>
    </nav>
 
