@@ -1,0 +1,300 @@
+<app-navbar></app-navbar>
+<div class="background-wrap">
+  <div class="background-img">
+    <h1 class="shadow uppercase vlp">
+      <span> Venda seu Muscle! Basta preencher o formulário! </span>
+    </h1>
+  </div>
+</div>
+<div class="gray-background">
+  <form [formGroup]="formSell" class="container">
+    <div class="inputs-imgs">
+      <div class="sell-form">
+        <div class="inputs">
+          <div class="formInfo">
+            <label for="brand">Marca:</label>
+            <input
+              formControlName="brand"
+              placeholder="Digite a marca do carro"
+              type="brand"
+              id="brand"
+              name="brand"
+              required
+            />
+            <div
+              *ngIf="
+                formSell.controls.brand.invalid &&
+                (formSell.controls.brand.dirty ||
+                  formSell.controls.brand.touched)
+              "
+            >
+              <div
+                class="alert"
+                *ngIf="formSell.controls.brand.errors?.['required']"
+              >
+                Campo obrigatório!
+              </div>
+            </div>
+          </div>
+
+          <div class="formInfo">
+            <label for="model">Modelo:</label>
+            <input
+              formControlName="model"
+              placeholder="Digite o modelo do carro"
+              type="model"
+              id="model"
+              name="model"
+              required
+            />
+            <div
+              *ngIf="
+                formSell.controls.model.invalid &&
+                (formSell.controls.model.dirty ||
+                  formSell.controls.model.touched)
+              "
+            >
+              <div
+                class="alert"
+                *ngIf="formSell.controls.model.errors?.['required']"
+              >
+                Campo obrigatório!
+              </div>
+            </div>
+          </div>
+
+          <div class="formInfo">
+            <label for="year">Ano:</label>
+            <input
+              formControlName="year"
+              placeholder="Digite o ano do carro"
+              type="year"
+              id="year"
+              name="year"
+              required
+            />
+            <div
+              *ngIf="
+                formSell.controls.year.invalid &&
+                (formSell.controls.year.dirty || formSell.controls.year.touched)
+              "
+            >
+              <div
+                class="alert"
+                *ngIf="formSell.controls.year.errors?.['required']"
+              >
+                Campo obrigatório!
+              </div>
+              <div
+                class="alert"
+                *ngIf="formSell.controls.year.errors?.['pattern']"
+              >
+                Formato inválido! Somente 4 números!
+              </div>
+            </div>
+          </div>
+
+          <div class="formInfo">
+            <label for="mileage">Km:</label>
+            <input
+              formControlName="mileage"
+              placeholder="Digite a KM do carro"
+              type="mileage"
+              id="mileage"
+              name="mileage"
+              required
+            />
+            <div
+              *ngIf="
+                formSell.controls.mileage.invalid &&
+                (formSell.controls.mileage.dirty ||
+                  formSell.controls.mileage.touched)
+              "
+            >
+              <div
+                class="alert"
+                *ngIf="formSell.controls.mileage.errors?.['required']"
+              >
+                Campo obrigatório!
+              </div>
+              <div
+                class="alert"
+                *ngIf="formSell.controls.mileage.errors?.['pattern']"
+              >
+                Formato inválido! Somente números!
+              </div>
+            </div>
+          </div>
+
+          <div class="formInfo">
+            <label for="transmission">Transmissão:</label>
+            <input
+              formControlName="transmission"
+              placeholder="Digite a transmissão do carro"
+              type="transmission"
+              id="transmission"
+              name="transmission"
+              required
+            />
+            <div
+              *ngIf="
+                formSell.controls.transmission.invalid &&
+                (formSell.controls.transmission.dirty ||
+                  formSell.controls.transmission.touched)
+              "
+            >
+              <div
+                class="alert"
+                *ngIf="formSell.controls.transmission.errors?.['required']"
+              >
+                Campo obrigatório!
+              </div>
+            </div>
+          </div>
+
+          <div class="formInfo">
+            <label for="engine">Motor:</label>
+            <input
+              formControlName="engine"
+              placeholder="Digite o motor do carro"
+              type="engine"
+              id="engine"
+              name="engine"
+              required
+            />
+            <div
+              *ngIf="
+                formSell.controls.engine.invalid &&
+                (formSell.controls.engine.dirty ||
+                  formSell.controls.engine.touched)
+              "
+            >
+              <div
+                class="alert"
+                *ngIf="formSell.controls.engine.errors?.['required']"
+              >
+                Campo obrigatório!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="desc-price">
+          <div class="formInfo">
+            <label for="price">Preço:</label>
+            <input
+              formControlName="price"
+              placeholder="Digite o preço do carro"
+              type="price"
+              id="price"
+              name="price"
+              required
+            />
+            <div
+              *ngIf="
+                formSell.controls.price.invalid &&
+                (formSell.controls.price.dirty ||
+                  formSell.controls.price.touched)
+              "
+            >
+              <div
+                class="alert"
+                *ngIf="formSell.controls.price.errors?.['required']"
+              >
+                Campo obrigatório!
+              </div>
+              <div
+                class="alert"
+                *ngIf="formSell.controls.price.errors?.['pattern']"
+              >
+                Formato inválido! Somente números!
+              </div>
+            </div>
+          </div>
+          <div class="formInfo">
+            <label for="shortDescription">Descrição:</label>
+            <input
+              class="shortDescription"
+              formControlName="shortDescription"
+              placeholder="Digite uma breve descrição do carro"
+              type="shortDescription"
+              id="shortDescription"
+              name="shortDescription"
+              required
+            />
+            <div
+              *ngIf="
+                formSell.controls.shortDescription.invalid &&
+                (formSell.controls.shortDescription.dirty ||
+                  formSell.controls.shortDescription.touched)
+              "
+            >
+              <div
+                class="alert"
+                *ngIf="formSell.controls.shortDescription.errors?.['required']"
+              >
+                Campo obrigatório!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="images">
+        <div
+          class="image-row"
+          *ngFor="
+            let image of formImages.controls;
+            last as isLast;
+            index as idx
+          "
+        >
+          <div class="input-group">
+            <label for="image">Imagem {{ idx + 1 }}:</label>
+            <input
+              [formControl]="image"
+              placeholder="Digite o link da imagem"
+              type="text"
+              id="image"
+              name="image"
+              required
+            />
+          </div>
+          <div class="button-group">
+            <button
+              mat-icon-button
+              color="warn"
+              (click)="removeImageControl(idx)"
+              *ngIf="formImages.length > 1"
+            >
+              <mat-icon>remove_circle</mat-icon>
+            </button>
+            <button
+              mat-icon-button
+              color="primary"
+              *ngIf="isLast && formImages.length < 5"
+              (click)="addImageControl()"
+            >
+              <mat-icon>add_circle</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="btnSubmit"
+      (click)="sellCar()"
+      type="submit"
+      [disabled]="formSell.invalid"
+    >
+      <img
+        class="loadingImg"
+        *ngIf="buttonLoading"
+        src="../../../../../assets/images/spinner.svg"
+      />
+      {{ buttonLoading ? "Verificando..." : "Vender Muscle" }}
+    </button>
+  </form>
+</div>
+<app-footer></app-footer>
