@@ -4,13 +4,15 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { InstallmentPipe } from './pipes/installment.pipe';
 
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    InstallmentPipe
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
   exports:[
     NavbarComponent,
     FooterComponent,
+    InstallmentPipe,
   ],
 })
 export class SharedModule { }

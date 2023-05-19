@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from './../../../../shared/services/user.service';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
   templateUrl: './login-page.component.html',
@@ -16,7 +17,7 @@ export class LoginPageComponent {
   });
 
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService, private authService: AuthService) { }
 
 userLogin() {
     this.buttonLoading = true;
@@ -25,8 +26,8 @@ userLogin() {
         return user.email === this.formLogin.value.email && user.password === this.formLogin.value.password
       })
       if (user) {
-        sessionStorage.setItem('user', JSON.stringify(user))
-        this.router.navigateByUrl('cars')
+        this.authService.userStorage(user)
+        this.router.navigateByUrl('/cars')
       }
       else {
         this.buttonLoading = false;
@@ -36,27 +37,3 @@ userLogin() {
     })
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // (ngSubmit)="userLogin()"

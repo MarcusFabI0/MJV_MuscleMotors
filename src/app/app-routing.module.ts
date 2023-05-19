@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CarsComponent } from './features/home/components/cars/cars.component';
+import {CarsComponent} from './features/home/components/cars/cars.component';
 import { CarDetailsPageComponent } from './features/home/pages/car-details-page/car-details-page.component';
 import { SellCarPageComponent } from './features/home/pages/sell-car-page/sell-car-page.component';
 import { LoginPageComponent } from './features/login/pages/login-page/login-page.component';
@@ -15,7 +15,7 @@ const routes: Routes = [
 },
 {
   path: 'login',
-  component:LoginPageComponent,
+  component:LoginPageComponent, 
 },
 {
   path: 'register',
@@ -32,6 +32,10 @@ const routes: Routes = [
 {
   path: 'cars/sell',
   component:SellCarPageComponent, canActivate: [AuthGuard]
+},
+{
+  path: '**',
+  redirectTo: '/cars'
 }
 
 ];

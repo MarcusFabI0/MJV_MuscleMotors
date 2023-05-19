@@ -7,7 +7,7 @@ import { User } from './../models/user.model';
   providedIn: 'root',
 })
 export class UserService {
-  baseUrl: string  = 'http://localhost:3000';
+  baseUrl: string = 'http://localhost:3000';
 
   options = {
     headers: {
@@ -20,20 +20,22 @@ export class UserService {
 
   //GET para o Login
   loginRequest(): Observable<any> {
-      return this.http.get<any>(
-      this.baseUrl + `/registeredUsers`,
-      this.options
-    ).pipe(delay(2500));
-
+    return this.http
+      .get<any>(this.baseUrl + `/registeredUsers`, this.options)
+      .pipe(delay(2500));
   }
 
+  getUsers(): Observable<Array<User>> {
+    return this.http.get<Array<User>>(
+      this.baseUrl + `/registeredUsers`,
+      this.options
+    );
+  }
 
   //POST
   userRegister(user: Partial<User>) {
-    return this.http.post(
-      this.baseUrl + `/registeredUsers`,
-      user,
-      this.options
-    ).pipe(delay(2500));
+    return this.http
+      .post(this.baseUrl + `/registeredUsers`, user, this.options)
+      .pipe(delay(2500));
   }
 }
