@@ -20,6 +20,10 @@ export class CarsComponent implements OnInit {
     });
   }
 
+  carDetails(carId: number) {
+    this.router.navigateByUrl(`/cars/details/${carId}`);
+  }
+
   logout() {
     window.sessionStorage.clear();
   }

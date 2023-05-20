@@ -3,9 +3,9 @@
   <div class="background-img"></div>
 </div>
 <div class="gray-background">
-  <div class="car">
-    <a href="*" class="car-grid-item" *ngFor="let car of cars">
-      <div class="car-container">
+<div class="car">
+    <a class="car-grid-item" *ngFor="let car of cars">
+      <div (click)="carDetails(car.id)" class="car-container">
         <div
           class="car-thumb"
           [ngStyle]="{ 'background-image': 'url(' + car.images[0] + ')' }"
@@ -21,7 +21,7 @@
             </div>
             <div class="car-highlight">
               <span class="mileage-title">KM: </span>
-              <span class="car-mileage">{{ car.mileage }}km</span>
+              <span class="car-mileage">{{ car.mileage | number}}km</span>
               <!-- <span class="car-header">{{car.shortDescription}}</span> -->
               <span class="car-header"
                 >Transmissão: {{ car.transmission | titlecase }}</span
