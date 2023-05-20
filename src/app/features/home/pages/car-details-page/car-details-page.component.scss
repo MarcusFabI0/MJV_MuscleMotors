@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.background-wrap {
+  background-color: #222222;
+  border-top: 165px solid #000000;
+}
+
+.background-img{
+  background-image: url(../../../../../assets/images/redGTO.jpg);
+  width: 100%;
+  height: 250px;
+  padding-top: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  background-color: #222222;
+}
+.background-img:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.35);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.background-img:after {
+content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(34,34,34,0) 0%, #222 100%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+.gray-background{
+  background-color: #222222;
+  padding-bottom: 100px;
+  padding-top: -30px;
+}
+
+.car-name{
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+  display: flex;
+  width: 57%;
+  padding-bottom: 15px;
+  justify-content: center;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  height: 100vh;
+}
+.imageCarousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+
+.imageCarousel img {
+  width: 100%;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.prev-button {
+  cursor: pointer;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #ce1f26;
+  border-radius: 50%;
+  border: 2px solid #ce1f26;
+  opacity: 1;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  background-image: url(../../../../../assets/images/prevImg.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+
+.next-button {
+  cursor: pointer;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #ce1f26;
+  border-radius: 50%;
+  border: 2px solid #ce1f26;
+  opacity: 1;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  background-image: url(../../../../../assets/images/nextImg.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+}
+.prev-button,
+.next-button:hover {
+  scale: (1.05);
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  height:100%;
+
+}
+
+.price-container {
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-align: left;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.price {
+  color: #fff;
+  width: 100%;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: bold;
+}
+.installment {
+  color: #fff;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.installment-value {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: normal;
+  font-weight: bold;
+  width: 100%;
+}
+
+.contact {
+  padding: 15px 0 20px 0;
+  width: 100%;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.phone {
+  background-color: #ce1f26;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  padding: 10px;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 25px;
+  width: 43%;
+  text-align: center;
+}
+
+.phone:hover {
+  content: url(../../../../../assets/images/phone.svg);
+  height: 50px;
+  scale: (1.05);
+  box-shadow: #fff;
+}
+
+.email {
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bold;
+  border: 2px solid #fff;
+  font-weight: bold;
+  font-size: 21px;
+  padding: 10px;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 25px;
+  width: 43%;
+  text-align: center;
+}
+
+.email:hover {
+  content: url(../../../../../assets/images/email.svg);
+  height: 50px;
+  scale: (1.05);
+  box-shadow: #fff;
+}
+
+.car-info {
+  width: 100%;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+.info-row-mileage{
+  display: block;
+  background-image: url(../../../../../assets/images/mileage.svg);
+  background-color: #000000;
+  padding: 10px 15px 10px 80px;
+  margin-bottom: 5px;
+  background-size: 60px 60px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  float: left;
+  width: 100%;
+}
+.info-row-engine{
+  display: block;
+  background-image: url(../../../../../assets/images/engine.svg);
+  background-color: #000000;
+  padding: 10px 15px 10px 80px;
+  margin-bottom: 5px;
+  background-size: 60px 60px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  float: left;
+  width: 100%;
+}
+.info-row-transmission{
+  display: block;
+  background-image: url(../../../../../assets/images/transmission.svg);
+  background-color: #000000;
+  padding: 10px 15px 10px 80px;
+  margin-bottom: 5px;
+  background-size: 60px 60px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  float: left;
+  width: 100%;
+}
+
+
+.item {
+  font-family: "PT Sans", sans-serif;
+  width: 100%;
+  float: left;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.info{
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  float: left;
+  color: #ffffff;
+  font-weight: bold;
+}
+

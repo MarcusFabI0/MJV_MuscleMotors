@@ -15,7 +15,7 @@ const routes: Routes = [
 },
 {
   path: 'login',
-  component:LoginPageComponent, 
+  component:LoginPageComponent,
 },
 {
   path: 'register',
@@ -26,17 +26,17 @@ const routes: Routes = [
   component:CarsComponent, canActivate: [AuthGuard]
 },
 {
-  path: 'cars/details',
+  path: 'cars/details/:carId',
   component:CarDetailsPageComponent, canActivate: [AuthGuard]
 },
 {
   path: 'cars/sell',
   component:SellCarPageComponent, canActivate: [AuthGuard]
 },
-{
-  path: '**',
-  redirectTo: '/cars'
-}
+// {
+//   path: '**',
+//   redirectTo: '/cars'
+// }
 
 ];
 

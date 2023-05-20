@@ -21,6 +21,9 @@ export class CarsService {
   getCars(): Observable<Array<Car>> {
     return this.http.get<Array<Car>>(this.baseUrl + `/cars`, this.options);
   }
+  getById(id: number) {
+    return this.http.get<Car>(this.baseUrl + `/cars/${id}`, this.options);
+  }
 
   //POST
   postCars(car: Partial<Car>) {

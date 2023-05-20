@@ -1,1 +1,55 @@
-<p>car-details-page works!</p>
+<app-navbar></app-navbar>
+<div *ngIf="car" class="background-wrap">
+
+  <div class="background-img"></div>
+</div>
+<div *ngIf="car"  class="gray-background">
+
+  <div class="teste">
+    <span class="car-name">{{ car.year }} {{ car.brand }} {{ car.model }}</span>
+    <div class="container">
+      <div class="imageCarousel">
+        <button (click)="decrementIndex()" class="prev-button"></button>
+        <img src="{{ car.images[currentIndex] }}" alt="" />
+        <button (click)="incrementIndex()" class="next-button"></button>
+      </div>
+
+      <div class="info-container">
+        <div class="price-container">
+          <span class="price">{{
+            car.price | currency : "BRL" : "symbol" : "3.2-2"
+          }}</span>
+          <span class="installment">ou em até 24x de:</span>
+          <span class="installment-value"
+            >{{
+              car.price | installment | currency : "BRL" : "symbol" : "3.2-2"
+            }}
+            / mês</span
+          >
+        </div>
+        <div class="contact">
+          <a title="Call Us" class="phone" href="tel:11988887777">Ligue</a>
+          <a title="Email Us" class="email" href="mailto:musclemotors@gmail.com"
+            >Email</a
+          >
+        </div>
+        <div class="car-info">
+          <div class="info-row-mileage">
+            <div class="item">Quilometragem</div>
+            <div class="info">{{ car.mileage | number}}km</div>
+          </div>
+          <div class="info-row-engine">
+            <div class="item">Motor</div>
+            <div class="info">{{ car.engine | titlecase }}</div>
+          </div>
+          <div class="info-row-transmission">
+            <div class="item">Transmissão</div>
+            <div class="info">{{ car.transmission | uppercase }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
