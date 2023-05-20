@@ -275,7 +275,18 @@ content: '';
   float: left;
   width: 100%;
 }
-
+.info-row-description{
+  display: block;
+  background-image: url(../../../../../assets/images/key.svg);
+  background-color: #000000;
+  padding: 10px 15px 10px 80px;
+  margin-bottom: 5px;
+  background-size: 60px 60px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  float: left;
+  width: 100%;
+}
 
 .item {
   font-family: "PT Sans", sans-serif;
@@ -286,6 +297,15 @@ content: '';
   text-transform: uppercase;
 }
 .info{
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  float: left;
+  color: #ffffff;
+  font-weight: bold;
+}
+.info-desc{
   font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 16px;
