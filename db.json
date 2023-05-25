@@ -1,0 +1,77 @@
+{
+  "registeredUsers": [
+    {
+      "name": "Marcus Fabio ",
+      "surname": "Abel Pinto",
+      "phone": "(11) 98888-7777",
+      "email": "teste@gmail.com",
+      "password": "Salve123!",
+      "birth": "2005-12-14",
+      "id": 1
+    }
+  ],
+  "cars": [
+    {
+      "id": 1,
+      "year": "1965",
+      "brand": "ford",
+      "model": "mustang fastback roadstaer",
+      "mileage": "471",
+      "transmission": "6 speed manual",
+      "engine": "5.0 V8",
+      "price": 549900,
+      "shortDescription": "Potência e estilo inigualáveis: o Mustang Fastback Roadster 5.0 V8. Um ícone sobre rodas, com um motor poderoso e um design arrebatador. Domine as ruas com velocidade e presença. Libere sua paixão automotiva. Adquira o seu hoje.",
+      "images": [
+        "https://cdn.dealeraccelerate.com/vanguard/1/27896/1374989/1920x1440/1965-ford-mustang-fastback-roadster-shop"
+      ],
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "year": "1967",
+      "brand": "Chevrolet",
+      "model": "Camaro rs",
+      "mileage": "1203",
+      "transmission": "4 speed manual",
+      "engine": "327ci V8",
+      "price": 549900,
+      "shortDescription": "Potência bruta e elegância clássica se encontram no Camaro RS 1967 V8. Um ícone sobre rodas, com um motor que ruge e um design que hipnotiza. Domine as ruas com estilo e velocidade. Seja parte da história automotiva. Adquira o seu hoje. ",
+      "images": [
+        "https://cdn.dealeraccelerate.com/vanguard/1/27906/1379956/1920x1440/1967-chevrolet-camaro-rs",
+        "https://cdn.dealeraccelerate.com/vanguard/1/27906/1379957/1920x1440/1967-chevrolet-camaro-rs",
+        "https://cdn.dealeraccelerate.com/vanguard/1/27906/1380029/1920x1440/1967-chevrolet-camaro-rs"
+      ],
+      "isActive": true
+    },
+    {
+      "brand": "dodge",
+      "model": "charger r/t",
+      "year": "1969",
+      "mileage": "6523",
+      "transmission": "automático 3 marchas",
+      "engine": "572 v8",
+      "shortDescription": "Icônico muscle utilizado na franquia Velozes e Furiosos e pilotado por Dominic Toretto",
+      "price": 529000,
+      "images": [
+        "https://cdn.dealeraccelerate.com/vanguard/1/27856/1373422/1920x1440/1969-dodge-charger-r-t",
+        "https://cdn.dealeraccelerate.com/vanguard/1/27856/1373483/1920x1440/1969-dodge-charger-r-t"
+      ],
+      "id": 3
+    },
+    {
+      "brand": "chevrolet",
+      "model": "chevelle",
+      "year": "1967",
+      "mileage": "2563",
+      "transmission": "manual 4 marchas",
+      "engine": "427 v8",
+      "shortDescription": "Potência imparável. Estilo inesquecível. Chevelle 427 V8. Domine as estradas. Adquira o seu hoje.",
+      "price": 129900,
+      "images": [
+        "https://cdn.dealeraccelerate.com/vanguard/1/17493/1373314/1920x1440/1967-chevrolet-chevelle-ss",
+        "https://cdn.dealeraccelerate.com/vanguard/1/17493/1373383/1920x1440/1967-chevrolet-chevelle-ss"
+      ],
+      "id": 4
+    }
+  ]
+}
